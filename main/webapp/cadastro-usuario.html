@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script src="js/usuario-service.js"></script>
+        <script src="js/usuario-controller.js"></script>
+        <script>
+            uc = new UsuarioController();
+        </script>
+    </head>
+    <body>
+        <form>
+            <input id="txtId" readonly="readonly"/>
+            <input id="txtUsuario"/>
+            <input id="txtSenha" type="password"/>
+            <input type="Button" value="Salvar" onclick="uc.aoClicarEmSalvar()"/>
+            <input type="Button" value="Listar" onclick="uc.aoClicarEmListar()"/>
+            <input type="Button" value="Cancelar Editar" onclick="uc.aoClicarCancelar()"/>
+        </form>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Senha</th>
+                    <th> - </th>
+                    <th> - </th>
+                </tr>
+            </thead>
+            <tbody id="tbUsuarios">             
+            </tbody>
+            <tfoot>
+                <tr><th>rodape</th></tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
